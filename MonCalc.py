@@ -1,10 +1,10 @@
 from tkinter import *
 from tkinter import messagebox
 
-bills = [1000,500,200,100,50,20,10,5,2,1]
+bills = [0,0,0,0,0,1000,500,200,100,50,20,10,5,2,1]
 
 def sum_info():
-    
+ 
     total_sum = Label(text=str(
                         float(label_1000_entry.get()) * 1000 * float(rates_head_e.get())
                         + float(label_500_entry.get()) * 500 * float(rates_head_e.get())
@@ -29,7 +29,52 @@ def sum_info():
                         + float(label_5_entry1.get()) * 5 * float(rat_hed1.get())
                         + float(label_2_entry1.get()) * 2 * float(rat_hed1.get())
                         + float(label_1_entry1.get()) * 1 * float(rat_hed1.get())))
-    total_sum1.grid(row=15,column=7,sticky="w")   
+    total_sum1.grid(row=15,column=7,sticky="w")  
+    
+    total_sum2 = Label(text=str(
+                        float(label_1000_entry2.get()) * 1000 * float(rat_hed2.get())
+                        + float(label_500_entry2.get()) * 500 * float(rat_hed2.get())
+                        + float(label_200_entry2.get()) * 200 * float(rat_hed2.get())
+                        + float(label_100_entry2.get()) * 100 * float(rat_hed2.get())
+                        + float(label_50_entry2.get()) * 50 * float(rat_hed2.get())
+                        + float(label_20_entry2.get()) * 20 * float(rat_hed2.get())
+                        + float(label_10_entry2.get()) * 10 * float(rat_hed2.get())
+                        + float(label_5_entry2.get()) * 5 * float(rat_hed2.get())
+                        + float(label_2_entry2.get()) * 2 * float(rat_hed2.get())
+                        + float(label_1_entry2.get()) * 1 * float(rat_hed2.get())))
+    total_sum2.grid(row=15,column=11,sticky="w") 
+
+    total_sumX = Label(text=str(float(label_1000_entry.get()) * 1000 * float(rates_head_e.get())
+                        + float(label_500_entry.get()) * 500 * float(rates_head_e.get())
+                        + float(label_200_entry.get()) * 200 * float(rates_head_e.get())
+                        + float(label_100_entry.get()) * 100 * float(rates_head_e.get())
+                        + float(label_50_entry.get()) * 50 * float(rates_head_e.get())
+                        + float(label_20_entry.get()) * 20 * float(rates_head_e.get())
+                        + float(label_10_entry.get()) * 10 * float(rates_head_e.get())
+                        + float(label_5_entry.get()) * 5 * float(rates_head_e.get())
+                        + float(label_2_entry.get()) * 2 * float(rates_head_e.get())
+                        + float(label_1_entry.get()) * 1 * float(rates_head_e.get())
+                        + float(label_1000_entry1.get()) * 1000 * float(rat_hed1.get())
+                        + float(label_500_entry1.get()) * 500 * float(rat_hed1.get())
+                        + float(label_200_entry1.get()) * 200 * float(rat_hed1.get())
+                        + float(label_100_entry1.get()) * 100 * float(rat_hed1.get())
+                        + float(label_50_entry1.get()) * 50 * float(rat_hed1.get())
+                        + float(label_20_entry1.get()) * 20 * float(rat_hed1.get())
+                        + float(label_10_entry1.get()) * 10 * float(rat_hed1.get())
+                        + float(label_5_entry1.get()) * 5 * float(rat_hed1.get())
+                        + float(label_2_entry1.get()) * 2 * float(rat_hed1.get())
+                        + float(label_1_entry1.get()) * 1 * float(rat_hed1.get())
+                        + float(label_1000_entry2.get()) * 1000 * float(rat_hed2.get())
+                        + float(label_500_entry2.get()) * 500 * float(rat_hed2.get())
+                        + float(label_200_entry2.get()) * 200 * float(rat_hed2.get())
+                        + float(label_100_entry2.get()) * 100 * float(rat_hed2.get())
+                        + float(label_50_entry2.get()) * 50 * float(rat_hed2.get())
+                        + float(label_20_entry2.get()) * 20 * float(rat_hed2.get())
+                        + float(label_10_entry2.get()) * 10 * float(rat_hed2.get())
+                        + float(label_5_entry2.get()) * 5 * float(rat_hed2.get())
+                        + float(label_2_entry2.get()) * 2 * float(rat_hed2.get())
+                        + float(label_1_entry2.get()) * 1 * float(rat_hed2.get())),font="Arial 18")
+    total_sumX.place(relx=.5, rely=.9, anchor="c", height=30, width=130, bordermode=OUTSIDE)
 
     sum1000 = Label(text=str(float(label_1000_entry.get()) * 1000 * float(rates_head_e.get())),height=2)
     sum1000.grid(row=5,column=3,sticky="w")
@@ -72,9 +117,30 @@ def sum_info():
     sum2.grid(row=13,column=7,sticky="w")
     sum1 = Label(text=str(float(label_1_entry1.get()) * 1 * float(rat_hed1.get())),height=2)
     sum1.grid(row=14,column=7,sticky="w")
+    
+    sum1000 = Label(text=str(float(label_1000_entry2.get()) * 1000 * float(rat_hed2.get())),height=2)
+    sum1000.grid(row=5,column=11,sticky="w")
+    sum500 = Label(text=str(float(label_500_entry2.get()) * 500 * float(rat_hed2.get())),height=2)
+    sum500.grid(row=6,column=11,sticky="w")
+    sum200 = Label(text=str(float(label_200_entry2.get()) * 200 * float(rat_hed2.get())),height=2)
+    sum200.grid(row=7,column=11,sticky="w")
+    sum100 = Label(text=str(float(label_100_entry2.get()) * 100 * float(rat_hed2.get())),height=2)
+    sum100.grid(row=8,column=11,sticky="w")
+    sum50 = Label(text=str(float(label_50_entry2.get()) * 50 * float(rat_hed2.get())),height=2)
+    sum50.grid(row=9,column=11,sticky="w")
+    sum20 = Label(text=str(float(label_20_entry2.get()) * 20 * float(rat_hed2.get())),height=2)
+    sum20.grid(row=10,column=11,sticky="w")
+    sum10 = Label(text=str(float(label_10_entry2.get()) * 10 * float(rat_hed2.get())),height=2)
+    sum10.grid(row=11,column=11,sticky="w")
+    sum5 = Label(text=str(float(label_5_entry2.get()) * 5 * float(rat_hed2.get())),height=2)
+    sum5.grid(row=12,column=11,sticky="w")
+    sum2 = Label(text=str(float(label_2_entry2.get()) * 2 * float(rat_hed2.get())),height=2)
+    sum2.grid(row=13,column=11,sticky="w")
+    sum1 = Label(text=str(float(label_1_entry2.get()) * 1 * float(rat_hed2.get())),height=2)
+    sum1.grid(row=14,column=11,sticky="w")
 
 root = Tk()
-root.geometry("600x470")
+root.geometry("1000x550+400+150")
 root.title("money calculator")
 
 # заголовок 1
@@ -97,62 +163,39 @@ factor_head = Label(text="rate",height=2,relief=GROOVE,width=7)
 factor_head.grid(row=3,column=6,rowspan=3,sticky="n")
 rates_head_l = Label(text="sum",height=2,relief=GROOVE,width=6)
 rates_head_l.grid(row=3,column=7,sticky="n")
+# заголовок 2
+bills_head = Label(text="bills",height=2,relief=GROOVE,anchor="c",width=5)
+bills_head.grid(row=3,column=8,rowspan=3,sticky="n")
+number_head = Label(text="number",height=2,relief=GROOVE)
+number_head.grid(row=3,column=9,rowspan=3,sticky="n")
+factor_head = Label(text="rate",height=2,relief=GROOVE,width=7)
+factor_head.grid(row=3,column=10,rowspan=3,sticky="n")
+rates_head_l = Label(text="sum",height=2,relief=GROOVE,width=6)
+rates_head_l.grid(row=3,column=11,sticky="n")
 
 # Поля для ввода курса
 rates_head_e = Entry(relief=GROOVE,width=7)
 rates_head_e.grid(padx=5, pady=5,row=4,column=2,sticky="w")
-rates_head_e.insert(0,1)
+rates_head_e.insert(0,1) # ставим в поле цифру - 1 
 
 rat_hed1 = Entry(width=7)
 rat_hed1.grid(padx=5, pady=5,row=4,column=6,sticky="w")
-rat_hed1.insert(0,1)
+rat_hed1.insert(0,1) # ставим в поле цифру - 1 
 
+rat_hed2 = Entry(width=7)
+rat_hed2.grid(padx=5, pady=5,row=4,column=10,sticky="w")
+rat_hed2.insert(0,1) # ставим в поле цифру - 1 
 
-
-
-#Текстовая разметка номинала денег 1
-label_1000 = Label(text="1000",height=2)
-label_1000.grid(row=5,column=0,sticky="w")
-label_500 = Label(text="500",height=2)
-label_500.grid(row=6,column=0,sticky="w")
-label_200 = Label(text="200",height=2)
-label_200.grid(row=7,column=0,sticky="w")
-label_100 = Label(text="100",height=2)
-label_100.grid(row=8,column=0,sticky="w")
-label_50 = Label(text="50",height=2)
-label_50.grid(row=9,column=0,sticky="w")
-label_20 = Label(text="20",height=2)
-label_20.grid(row=10,column=0,sticky="w")
-label_10 = Label(text="10",height=2)
-label_10.grid(row=11,column=0,sticky="w")
-label_5 = Label(text="5",height=2)
-label_5.grid(row=12,column=0,sticky="w")
-label_2 = Label(text="2",height=2)
-label_2.grid(row=13,column=0,sticky="w")
-label_1 = Label(text="1",height=2)
-label_1.grid(row=14,column=0,sticky="w")
-
-#Текстовая разметка номинала денег 2
-label_1000 = Label(text="1000",height=2)
-label_1000.grid(row=5,column=4,sticky="w")
-label_500 = Label(text="500",height=2)
-label_500.grid(row=6,column=4,sticky="w")
-label_200 = Label(text="200",height=2)
-label_200.grid(row=7,column=4,sticky="w")
-label_100 = Label(text="100",height=2)
-label_100.grid(row=8,column=4,sticky="w")
-label_50 = Label(text="50",height=2)
-label_50.grid(row=9,column=4,sticky="w")
-label_20 = Label(text="20",height=2)
-label_20.grid(row=10,column=4,sticky="w")
-label_10 = Label(text="10",height=2)
-label_10.grid(row=11,column=4,sticky="w")
-label_5 = Label(text="5",height=2)
-label_5.grid(row=12,column=4,sticky="w")
-label_2 = Label(text="2",height=2)
-label_2.grid(row=13,column=4,sticky="w")
-label_1 = Label(text="1",height=2)
-label_1.grid(row=14,column=4,sticky="w")
+#Текстовая разметка номинала денег 1,2,3
+for i in range(5,15):
+    label_1000 = Label(text=bills[i],height=2)
+    label_1000.grid(row=i,column=0,sticky="w")
+for i in range(5,15):
+    label_1000 = Label(text=bills[i],height=2)
+    label_1000.grid(row=i,column=4,sticky="w")
+for i in range(5,15):
+    label_1000 = Label(text=bills[i],height=2)
+    label_1000.grid(row=i,column=8,sticky="w")
 
 # Текстовая разметка для указания курса
 for x in range(5,15):
@@ -161,6 +204,9 @@ for x in range(5,15):
 for x in range(5,15):
     label_x = Label(text="=",height=2,width=5)
     label_x.grid(row=x,column=6,sticky="w")
+for x in range(5,15):
+    label_x = Label(text="=",height=2,width=5)
+    label_x.grid(row=x,column=10,sticky="w")
 
 # поля ввода кол-ва купюр 
 label_1000_entry = Entry(width=7)
@@ -206,7 +252,29 @@ label_2_entry1.grid(row=13,column=5,sticky="e")
 label_1_entry1 = Entry(width=7)
 label_1_entry1.grid(row=14,column=5,sticky="e")
 
-#Устанавливаем в полях ввода 1 кол-ва - 0
+# поля ввода кол-ва купюр 2
+label_1000_entry2 = Entry(width=7)
+label_1000_entry2.grid(row=5,column=9,sticky="e")
+label_500_entry2 = Entry(width=7)
+label_500_entry2.grid(row=6,column=9,sticky="e")
+label_200_entry2 = Entry(width=7)
+label_200_entry2.grid(row=7,column=9,sticky="e")
+label_100_entry2 = Entry(width=7)
+label_100_entry2.grid(row=8,column=9,sticky="e")
+label_50_entry2 = Entry(width=7)
+label_50_entry2.grid(row=9,column=9,sticky="e")
+label_20_entry2 = Entry(width=7)
+label_20_entry2.grid(row=10,column=9,sticky="e")
+label_10_entry2 = Entry(width=7)
+label_10_entry2.grid(row=11,column=9,sticky="e")
+label_5_entry2 = Entry(width=7)
+label_5_entry2.grid(row=12,column=9,sticky="e")
+label_2_entry2 = Entry(width=7)
+label_2_entry2.grid(row=13,column=9,sticky="e")
+label_1_entry2 = Entry(width=7)
+label_1_entry2.grid(row=14,column=9,sticky="e")
+
+#Устанавливаем в полях ввода кол-ва - 0
 label_1000_entry.insert(0,0)
 label_500_entry.insert(0,0)
 label_200_entry.insert(0,0)
@@ -217,7 +285,7 @@ label_10_entry.insert(0,0)
 label_5_entry.insert(0,0)
 label_2_entry.insert(0,0)
 label_1_entry.insert(0,0)
-#Устанавливаем в полях ввода 2 кол-ва - 0
+#Устанавливаем в полях ввода 1 кол-ва - 0
 label_1000_entry1.insert(0,0)
 label_500_entry1.insert(0,0)
 label_200_entry1.insert(0,0)
@@ -228,10 +296,24 @@ label_10_entry1.insert(0,0)
 label_5_entry1.insert(0,0)
 label_2_entry1.insert(0,0)
 label_1_entry1.insert(0,0)
+#Устанавливаем в полях ввода 2 кол-ва - 0
+label_1000_entry2.insert(0,0)
+label_500_entry2.insert(0,0)
+label_200_entry2.insert(0,0)
+label_100_entry2.insert(0,0)
+label_50_entry2.insert(0,0)
+label_20_entry2.insert(0,0)
+label_10_entry2.insert(0,0)
+label_5_entry2.insert(0,0)
+label_2_entry2.insert(0,0)
+label_1_entry2.insert(0,0)
 
 
 # здесь будут кнопки
 sum_btn = Button(text="Total",command=sum_info)
 sum_btn.place(relx=.8, rely=.9, anchor="c", height=30, width=130, bordermode=OUTSIDE)
+
+refresh_btn = Button(text="Refresh")
+refresh_btn.place(relx=.2, rely=.9, anchor="c", height=30, width=130, bordermode=OUTSIDE)
 
 root.mainloop()
